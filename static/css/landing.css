@@ -17,7 +17,9 @@
 
 * {
     font-family: "open-sans";
-    color: white;   
+    font-weight: 400;
+    color: white;
+
 }
 
 body {
@@ -62,7 +64,8 @@ h1, button {
     margin-right: 80px;
     color: #FE9400;
     font-size: 500%;
-    inline-size: 70%;
+    font-weight: 200;
+    inline-size: 80%;
     overflow-wrap: break-word;
 }
 
@@ -107,6 +110,8 @@ h1, button {
 
 .sea-shape {
     display: inline-block;
+    filter: blur(3px);
+    opacity: 0.7;
 }
 
 #sea-shape-1 {
@@ -151,16 +156,18 @@ h1, button {
     bottom: 10px;
     opacity: 0.5;
     font-weight: 400;
-    font-size: 180%;
+    font-size: 220%;
     margin-block-start: 0;
 }
 
 .button {
+    position: relative;
+    top: 30px;
     background: linear-gradient(to bottom right, transparent, #EFEFEF);
     border-color: #EFEFEF;
     color: black;
-    font-size: 380%;
-    height: 1.3em;
+    font-size: 400%;
+    height: 1.5em;
     width: 92%;
     border-radius: 15px;
 }
@@ -173,7 +180,7 @@ h1, button {
 
 @media only screen and (min-width: 1000px) {
     #signed-msg {
-        font-size: 150%;
+        font-size: 200%;
     }
 }
 
@@ -270,7 +277,7 @@ h1, button {
 }
 
 strong {
-    font-family: "open-sans-bold";
+    font-family: "open-sans";
 }
 
 .o-strong {
@@ -301,6 +308,8 @@ strong {
 .form-field {
     margin-block-start: 1em;
     margin-block-end: 1em;
+    inline-size: 80%;
+    overflow-wrap: break-word;
 }
 
 .fade-text {
