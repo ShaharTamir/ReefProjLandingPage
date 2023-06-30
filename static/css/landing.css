@@ -1,0 +1,350 @@
+@font-face {
+    font-family: "bamberger-bold-fm";
+    src: url("../fonts/bamberger-bold-fm.eot"),
+    url("../fonts/bamberger-bold-fm.otf") format("opentype"),
+    url("../fonts/bamberger-bold-fm.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "open-sans";
+    src: url("../fonts/OpenSansHebrew-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "open-sans-bold";
+    src: url("../fonts/OpenSans-Bold.ttf") format('truetype');
+}
+
+* {
+    font-family: "open-sans";
+    color: white;   
+}
+
+body {
+    margin: 0;
+    overflow: scroll;
+    text-align: right;
+    direction: rtl;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+h1, button {
+    font-family: "bamberger-bold-fm"
+}
+
+
+/******************* BACKGROUNDS ***************/
+
+.background {
+    content: "";
+    position: absolute;
+    overflow-x: hidden;
+    width: 100%;
+    z-index: -1;
+}
+
+#sky {
+    width: 100%;
+    height: 800px;
+    background: #E2F7FA;
+}
+
+#background-gradient {
+    background: linear-gradient(#76C4CE, #141421 700px);
+    top: 800px;
+}
+
+/******************* SKY AND SEA CONNECTION *******/
+
+#sky-title {
+    margin-top: 80px;
+    margin-right: 80px;
+    color: #FE9400;
+    font-size: 500%;
+    inline-size: 70%;
+    overflow-wrap: break-word;
+}
+
+
+/******************* SHIP *****************/
+
+#ship {
+    position: absolute;
+    width: 450px;
+    top: 620px;
+    left: 100px;
+    animation: side-to-side 4s ease-in-out infinite alternate;
+}
+
+/* responsive ship design for mobile and pc */
+@media only screen and (min-width: 1400px) {
+    #ship {
+        top: 590px;
+        width: 35%;
+    }
+}
+
+@media only screen and (min-width: 1650px) {
+    #ship {
+        top: 550px;
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+    #ship {
+        top: 520px;
+    }
+}
+
+
+/******************* SEA VECTORS *****************/
+
+#sea-shape {
+    display: block;
+    width: 200%;
+}
+
+.sea-shape {
+    display: inline-block;
+}
+
+#sea-shape-1 {
+    position: relative;
+    left: 100px;
+    width: 900px;
+    animation: side-to-side 3s ease-in-out infinite alternate;
+}
+
+#sea-shape-2 {
+    position: relative;
+    left: 250px;
+    width: 700px;
+    animation: side-to-side 2.5s ease-in-out infinite alternate
+}
+
+@media only screen and (min-width: 1350px) {
+    #sea-shape-1 {
+        width: 33%;
+    }
+
+    #sea-shape-2 {
+        width: 25%;
+        left: 10%;
+    }
+}
+
+/************************ SIGNUPS **********************/
+.signups{
+    position: relative;
+    bottom: 700px;
+    margin-right: 80px;
+}
+
+#num-signed {
+    font-size: 800%;
+    margin-block-end: 0;
+}
+
+#signed-msg {
+    position: relative;
+    bottom: 10px;
+    opacity: 0.5;
+    font-weight: 400;
+    font-size: 180%;
+    margin-block-start: 0;
+}
+
+.button {
+    background: linear-gradient(to bottom right, transparent, #EFEFEF);
+    border-color: #EFEFEF;
+    color: black;
+    font-size: 380%;
+    height: 1.3em;
+    width: 92%;
+    border-radius: 15px;
+}
+
+.icon {
+    margin-right: 20px;
+    margin-bottom: 5px;
+    width: 35px;
+}
+
+@media only screen and (min-width: 1000px) {
+    #signed-msg {
+        font-size: 150%;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .signups {
+        position: relative;
+        bottom: 800px;
+    }
+}
+
+/************************ GIFS **********************/
+
+.gif {
+    opacity: 0.5;
+    position: relative;
+    bottom: 450px;
+}
+
+
+/*********** turtle **********/
+#turtle-container {
+    position: relative;
+    bottom: 450px;
+    left: -25%;
+    transform: rotateY(180deg);
+}
+
+#turtle {
+    width: 700px;
+}
+
+@media only screen and (min-width: 1000px) {
+    #turtle-container {
+        left: -20%;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    #turtle {
+        width: 900px;
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+    #turtle-container {
+        left: -15%;
+    }
+}
+
+/********** jellyfish ************/
+#jellyfish-container {
+    right: -3%;
+}
+
+#jellyfish {
+    width: 350px;
+}
+
+
+/********** fish *****************/
+#fish-container {
+    display: block;
+    position: relative;
+    bottom:  0px;
+    opacity: 1;
+}
+
+#fish {
+    position: relative;
+    width: 100%;
+}
+
+
+/************************ MAIN CONTENT **********************/
+
+#content {
+    position: absolute;
+    top: 1600px;
+    margin-right: 80px;
+    inline-size: 80%;
+    overflow-wrap: break-word;
+
+}
+
+.content {
+    font-size: 250%;
+    margin-block-start: 1.2em;
+    margin-block-end: 1.2em;
+}
+
+.last-content {
+    margin-block-start: 7em;
+    margin-block-end: 1em;
+}
+
+strong {
+    font-family: "open-sans-bold";
+}
+
+.o-strong {
+    color: #FE9400;
+}
+
+@media only screen and (min-width: 700px) {
+    .content {
+        font-size: 200%;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    #content {
+        top: 170%;
+    }
+}
+
+/************************ FINAL FORM **********************/
+#final-form {
+    font-size: 180%;
+    margin-right: 80px;
+    width: 92%;
+    position: absolute;
+    top: 2800px;
+}
+
+.form-field {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+.fade-text {
+    opacity: 0.5;
+}
+
+.text-input {
+    width: 92%;
+    height: 3em;
+    font-size: 130%;
+    border-radius: 20px;
+    border-color: white;
+    background: transparent;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    width: 100px;
+    height: 4.5em;
+    left: 20px;
+    accent-color: #FE9400;
+    background-color: #141421;
+}
+
+#submit-button {
+    height: 2em;
+    font-size: 200%;
+    border-radius: 20px;
+}
+
+#left-icon {
+    height: 40px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+
+/************************ ANIMATIONS **********************/
+
+@keyframes side-to-side {
+    from {
+        transform: rotate(5deg);
+    }
+    to {
+        transform: rotate(-5deg);
+    }
+}
