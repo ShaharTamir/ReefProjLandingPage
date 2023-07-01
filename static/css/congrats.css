@@ -1,0 +1,211 @@
+html, body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    background: #141421;
+    font-size: 40px;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+strong {
+    font-weight: 500;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    height: inherit;
+}
+
+#main-title-container {
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#main-title {
+    font-size: 400%;
+    color: #2FF7E1;
+    inline-size: 72%;
+    word-wrap: break-word;
+}
+
+#msg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+#signature {
+    display: flex;
+    justify-content: left;
+    margin-right: 10%;
+    margin-left: 35%;
+}
+
+
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    margin-right: 12%;
+    margin-left: 12%;
+}
+
+button {
+    margin-block-start: 3.5em;
+    height: 3.3em;
+    width: 100%;
+    font-size: 100%;
+    border-radius: 15px;
+    background: linear-gradient(to bottom right, transparent, #EFEFEF);
+    border-color: #EFEFEF;
+    backdrop-filter: blur(5px);
+    z-index: 20;
+}
+
+.button-title {
+    position: relative;
+    bottom: 32px;
+    color: black;
+}
+
+#arrow {
+    position: relative;
+    top: 35px;
+    height: 50px;
+    margin-right: 25px;
+}
+
+#corals-location-container {
+    position: absolute;
+    width: 100%;
+    top: 750px;
+}
+
+#corals-container {
+    position: relative;
+    direction: ltr;
+    text-align: left;
+    bottom: 0px;
+}
+
+#bubble {
+    position: relative;
+    left: 0;
+    width: 30%;
+    z-index: -3;
+}
+
+.corals {
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+}
+
+#left-coral {
+    left: 0;
+    height: 350px;
+}
+
+#reef {
+    right: 0;
+    height: 300px;
+}
+
+.blur-light{
+    content: "";
+    position: absolute;
+    border-radius: 100%;
+    z-index: -1;
+}
+
+#blur-top {
+    height: 300px;
+    width: 300px;
+    filter: blur(200px);
+    top: 0;
+    left: -10%;
+    background: #01E0A5;
+}
+
+#blur-mid {
+    height: 325px;
+    width: 325px;
+    filter: blur(200px);
+    top: 400px;
+    right: -10%;
+    background: #8ED0D3;
+}
+
+#blur-bottom {
+    height: 500px;
+    width: 500px;
+    filter: blur(400px);
+    left: 30%;
+    top: 1200px;
+    background: #2FF7E1;
+}
+
+@media only screen and (min-width: 1000px) {
+    #signature {
+        margin-left: 40%;
+    }
+
+    #corals-location-container {
+        top: 650px;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    #signature {
+        margin-left: 50%;
+    }
+
+    #corals-location-container {
+        top: 400px;
+    }
+}
+
+@media only screen and (min-width: 1450px) {
+    #corals-location-container {
+        top: 200px;
+    }
+}
+
+@media only screen and (min-width: 1525px) {
+    #corals-location-container {
+        top: 0px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    #signature {
+        margin-left: 60%;
+    }
+
+    #corals-location-container {
+        top: -100px;
+    }
+
+    #blur-bottom {
+        left: 35%;
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+    #corals-location-container {
+        top: -300px;
+    }
+}
