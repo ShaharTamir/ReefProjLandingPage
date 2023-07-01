@@ -21,14 +21,23 @@
     color: white;
 }
 
+html {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
+    position: relative;
     margin: 0;
     width: 100%;
     height: 100%;
     text-align: right;
     direction: rtl;
-    overflow-y: scroll;
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 h1, button {
