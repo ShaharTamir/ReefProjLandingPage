@@ -1,41 +1,3 @@
-@font-face {
-    font-family: "bamberger-bold-fm";
-    src: url("../fonts/bamberger-bold-fm.eot"),
-    url("../fonts/bamberger-bold-fm.otf") format("opentype"),
-    url("../fonts/bamberger-bold-fm.ttf") format('truetype');
-}
-
-@font-face {
-    font-family: "open-sans";
-    src: url("../fonts/OpenSansHebrew-Regular.ttf") format('truetype');
-}
-
-@font-face {
-    font-family: "open-sans-bold";
-    src: url("../fonts/OpenSans-Bold.ttf") format('truetype');
-}
-
-* {
-    font-family: "open-sans";
-    font-weight: 400;
-    color: white;
-
-}
-
-body {
-    margin: 0;
-    overflow: scroll;
-    text-align: right;
-    direction: rtl;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-h1, button {
-    font-family: "bamberger-bold-fm"
-}
-
-
 /******************* BACKGROUNDS ***************/
 
 .background {
@@ -55,15 +17,21 @@ h1, button {
 
 #background-gradient {
     background: linear-gradient(#76C4CE, #141421 700px);
-    height: 3800px; 
+    height: 4000px; 
     top: 800px;
+}
+
+@media only screen and (min-width: 1400px) {
+    #background-gradient {
+        height: 5000px;
+    }
 }
 
 /******************* SKY AND SEA CONNECTION *******/
 
 #sky-title {
     margin-top: 120px;
-    margin-right: 80px;
+    margin-right: 90px;
     color: #FE9400;
     font-size: 600%;
     font-weight: 200;
@@ -145,7 +113,7 @@ h1, button {
 .signups{
     position: relative;
     bottom: 700px;
-    margin-right: 80px;
+    margin-right: 90px;
 }
 
 #num-signed {
@@ -246,7 +214,7 @@ h1, button {
 #fish-container {
     display: block;
     position: relative;
-    bottom:  -300px;
+    bottom:  -550px;
     opacity: 1;
 }
 
@@ -255,13 +223,24 @@ h1, button {
     width: 100%;
 }
 
+@media only screen and (min-width: 1400px) {
+    #fish-container {
+        bottom: -300px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    #fish-container {
+        bottom: 40px;
+    }
+}
 
 /************************ MAIN CONTENT **********************/
 
 #content {
     position: absolute;
     top: 1600px;
-    margin-right: 80px;
+    margin-right: 90px;
     inline-size: 80%;
     overflow-wrap: break-word;
 
@@ -288,25 +267,43 @@ strong {
 }
 
 
+@media only screen and (min-width: 1400px) {
+    #content {
+        top: 1550px;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    #content {
+        top: 1650px;
+    }
+}
+
 @media only screen and (min-width: 1600px) {
     #content {
-        top: 170%;
+        top: 1700px;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    #content {
+        top: 1800px;
     }
 }
 
 /************************ FINAL FORM **********************/
 #final-form {
-    font-size: 180%;
-    margin-right: 80px;
+    font-size: 220%;
+    margin-right: 90px;
     width: 92%;
     position: absolute;
     top: 3400px;
 }
 
 .form-field {
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    inline-size: 80%;
+    margin-block-start: 2em;
+    margin-block-end: 2em;
+    inline-size: 92%;
     overflow-wrap: break-word;
 }
 
@@ -316,8 +313,8 @@ strong {
 
 .text-input {
     width: 92%;
-    height: 3em;
-    font-size: 130%;
+    height: 2.5em;
+    font-size: 150%;
     border-radius: 20px;
     border-color: white;
     background: transparent;
@@ -328,20 +325,66 @@ input[type="checkbox"] {
     width: 100px;
     height: 4.5em;
     left: 20px;
-    accent-color: #FE9400;
-    background-color: #141421;
+    opacity: 0;
+}
+
+.check {
+    position: absolute;
+    margin-top: 40px;
+    margin-right: 12.5%;
+    inline-size: 75%;
+    overflow-wrap: break-word;
+}
+
+#checkbox-bg {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    border: solid;
+    border-color: white;
+    border-radius: 15px;
+    background-color: transparent;/*#141421;*/
+}
+
+#checkbox-bg:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 8px;
+    width: 13px;
+    height: 28px;
+    border: solid #141421;
+    border-width: 0 8px 8px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+#check-text {
+    position: absolute;
+    top: -5px;
+    right: 50px;
 }
 
 #submit-button {
     height: 2em;
     font-size: 200%;
     border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border-color: transparent;
+    background: rgba(255, 255, 255, 0.15);
 }
 
 #left-icon {
     height: 40px;
     margin-top: 15px;
     margin-bottom: 0px;
+}
+
+.required-field {
+    position: relative;
+    margin-left: 10px;
+    color: red;
 }
 
 
