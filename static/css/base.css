@@ -38,6 +38,7 @@ body {
     direction: rtl;
     overflow-x: hidden;
     overflow-y: scroll;
+    z-index: -1;
 }
 
 h1, button {

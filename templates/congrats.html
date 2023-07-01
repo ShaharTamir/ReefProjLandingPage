@@ -4,8 +4,8 @@
     <title>
         ThankYou!
     </title>
-    <link rel="stylesheet" type="text/css" href="static/css/base.css">
-    <link rel="stylesheet" type="text/css" href="static/css/congrats.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/congrats.css') }}">
 </head>
 <body>
     <div id="main-title-container">
@@ -20,17 +20,17 @@
     </div>
     <div id="button-container">
         <button>
-            <a href="./index.html">
+            <a href="{{ url_for('main') }}">
                 <h1 class="button-title">להרשמה נוספת</h1>
-                <img id="arrow" src="static/imgs/arrow-left.svg">
+                <img id="arrow" src="{{ url_for('static', filename='imgs/arrow-left.svg') }}">
             </a>
         </button>
     </div>
     <div id="corals-location-container">
         <div id="corals-container">
-            <img id="bubble" src="static/gifs/bubble.gif">
-            <img id="left-coral" class="corals" src="static/imgs/left-coral.svg">
-            <img id="reef" class="corals" src="static/imgs/reef.svg">
+            <img id="bubble" src="{{ url_for('static', filename='gifs/bubble.gif') }}">
+            <img id="left-coral" class="corals" src="{{ url_for('static', filename='imgs/left-coral.svg') }}">
+            <img id="reef" class="corals" src="{{ url_for('static', filename='imgs/reef.svg') }}">
         </div>
     </div>
     <span id="blur-top" class="blur-light"></span>

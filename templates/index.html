@@ -4,36 +4,36 @@
     <title>
         Corals Landing Page
     </title>
-    <link rel="stylesheet" type="text/css" href="static/css/base.css">
-    <link rel="stylesheet" type="text/css" href="static/css/index.css">
-    <script src="static/javascript/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+    <script src="{{ url_for('static', filename='javascript/index.js') }}"></script>
 </head>
 <body>
     <div id="sky" class="background">
         <h1 id="sky-title">תומכים בפרוייקט המרפסות ולוקחים חלק בשיקום השונית בחוף קצא"א</h1>
     </div>
-    <img id="ship" src="static/imgs/ship.svg">
+    <img id="ship" src="{{ url_for('static', filename='imgs/ship.svg') }}">
     <div id="background-gradient" class="background">
         <div id="sea-shape">
-            <img id="sea-shape-1" class="sea-shape" src="static/imgs/vector-right.svg">
-            <img id="sea-shape-2" class="sea-shape" src="static/imgs/vector-left.svg">
+            <img id="sea-shape-1" class="sea-shape" src="{{ url_for('static', filename='imgs/vector-right.svg') }}">
+            <img id="sea-shape-2" class="sea-shape" src="{{ url_for('static', filename='imgs/vector-left.svg') }}">
         </div>
         <div class="signups">
-            <h1 id="num-signed">0</h1>
+            <h1 id="num-signed">{{signed}}</h1>
             <p id="signed-msg">א.נשים כבר נרשמו, ומה איתך?</p>
             <button id="sign-button" class="button" onclick="smoothScroll(document.getElementById('scroll-id'))">
                 הרשמו עכשיו 
-                <img class="icon" src="static/imgs/arrow-down.svg">
+                <img class="icon" src="{{ url_for('static', filename='imgs/arrow-down.svg') }}">
             </button>
         </div>
         <div id="turtle-container" class="gif">
-            <img id="turtle" src="static/gifs/turtle.gif">
+            <img id="turtle" src="{{ url_for('static', filename='gifs/turtle.gif') }}">
         </div>
         <div id="jellyfish-container" class="gif">
-            <img id="jellyfish" src="static/gifs/medusa.gif">
+            <img id="jellyfish" src="{{ url_for('static', filename='gifs/medusa.gif') }}">
         </div>
         <div id="fish-container" class="gif">
-            <img id="fish" src="static/gifs/fish.gif">
+            <img id="fish" src="{{ url_for('static', filename='gifs/fish.gif') }}">
         </div>
     </div>
     <div id="content">
@@ -70,18 +70,24 @@
             </strong>
         </p>
     </div>
-    <form id="final-form" method="POST" action="congrats.html">
+    <form id="final-form" method="POST" action="{{url_for('signup')}}">
         <div class="form-field">
-            <label for="name"><strong><span class="required-field">* </span>השם שלך </strong><span class="fade-text">| מבטיחים שישאר בנינו</span> </label>
-            <input type="text" id="name" name="user_name" class="input text-input" required>
+            <label for="user_name">
+                <strong><span class="required-field">* </span>השם שלך </strong>
+                <span class="fade-text">| מבטיחים שישאר בנינו</span>
+            </label>
+            <input type="text" id="user_name" name="user_name" class="input text-input" onchange="enable_send()" required>
         </div>
         <div class="form-field">
-            <label for="email"><strong><span class="required-field">* </span>האימייל שלך </strong><span class="fade-text">| מבטיחים בלי ספאם</span> </label>
-            <input type="email" id="email" name="user_email" class="input text-input" required>
+            <label for="user_email">
+                <strong><span class="required-field">* </span>האימייל שלך </strong>
+                <span class="fade-text">| מבטיחים בלי ספאם</span>
+            </label>
+            <input type="email" id="user_email" name="user_email" class="input text-input" onchange="enable_send()" required>
         </div>
         <div class="form-field">
             <label for="check" class="check">
-                <span class="required-field">* </span>
+                <strong><span class="required-field">* </span></strong>
                 <div id="check-text">אני מסכימ.ה שיצרו איתי קשר מעמותת "ים ואדמה" (1234567), לצורך תרומה לפרוייקט</div>
             </label><br>
             <div>
@@ -91,12 +97,8 @@
         </div>
         <button type="submit" id="submit-button" class="button" disabled>
             שלח
-            <img id="left-icon" class="icon" src="static/imgs/arrow-left.svg">
+            <img id="left-icon" class="icon" src="{{ url_for('static', filename='imgs/arrow-left.svg') }}">
         </button>
     </form>
-    
 </body>
-<script>
-
-</script>
 </html>
