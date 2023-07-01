@@ -10,14 +10,15 @@
 }
 
 #sky {
-    width: 100%;
+    width: 101%;
     height: 800px;
     background: #E2F7FA;
 }
 
 #background-gradient {
     background: linear-gradient(#76C4CE, #141421 700px);
-    height: 4000px; 
+    height: 4000px;
+    width: 101%; 
     top: 800px;
 }
 
