@@ -163,7 +163,7 @@
 /************************ GIFS **********************/
 
 .gif {
-    opacity: 0.5;
+    opacity: 0.3;
     position: relative;
     bottom: 450px;
 }
@@ -174,8 +174,6 @@
     position: relative;
     bottom: 450px;
     right: -25%;
-    /*transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);*/
 }
 
 #turtle {
@@ -292,6 +290,12 @@ strong {
     }
 }
 
+@media only screen and (min-width: 1900px) {
+    #content {
+        top: 2000px;
+    }
+}
+
 /************************ FINAL FORM **********************/
 #final-form {
     font-size: 220%;
@@ -372,6 +376,7 @@ input[type="checkbox"] {
     font-size: 200%;
     border-radius: 20px;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-color: transparent;
     background: rgba(255, 255, 255, 0.15);
 }

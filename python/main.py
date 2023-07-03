@@ -27,7 +27,7 @@ def main():
     return render_template("index.html", signed=signed)
 
 
-@app.route("/signup", methods=['POST'])
+@app.route("/signup", methods=['POST', 'GET'])
 def signup():
     if request.form:
         name = request.form.get("user_name")
