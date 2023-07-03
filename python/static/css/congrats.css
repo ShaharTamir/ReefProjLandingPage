@@ -54,8 +54,6 @@ a {
     margin-left: 35%;
 }
 
-
-
 #button-container {
     display: flex;
     justify-content: center;
@@ -72,6 +70,7 @@ button {
     background: linear-gradient(to bottom right, transparent, #EFEFEF);
     border-color: #EFEFEF;
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     z-index: 20;
 }
 
@@ -88,29 +87,27 @@ button {
     margin-right: 25px;
 }
 
-#corals-location-container {
+#bubble-container {
     position: absolute;
     width: 100%;
-    top: 750px;
-}
-
-#corals-container {
-    position: relative;
     direction: ltr;
     text-align: left;
-    bottom: 0px;
 }
 
 #bubble {
-    position: relative;
-    left: 0;
     width: 30%;
-    z-index: -3;
+    z-index: -5;
+}
+
+#corals-container {
+    margin-block-start: 250px;
+    min-height: 500px;
+    display: flex;
+    align-items: flex-end;
 }
 
 .corals {
     position: absolute;
-    bottom: 0px;
     z-index: 1;
 }
 
@@ -128,12 +125,13 @@ button {
     content: "";
     position: absolute;
     border-radius: 100%;
-    z-index: -1;
+    z-index: 0;
 }
 
 #blur-top {
     height: 300px;
     width: 300px;
+    -webkit-filter: blur(200px);
     filter: blur(200px);
     top: 0;
     left: -10%;
@@ -143,6 +141,7 @@ button {
 #blur-mid {
     height: 325px;
     width: 325px;
+    -webkit-filter: blur(200px);
     filter: blur(200px);
     top: 400px;
     right: -10%;
@@ -152,6 +151,7 @@ button {
 #blur-bottom {
     height: 500px;
     width: 500px;
+    -webkit-filter: blur(400px);
     filter: blur(400px);
     left: 30%;
     top: 1200px;

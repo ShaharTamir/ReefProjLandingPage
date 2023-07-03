@@ -1,0 +1,4 @@
+Flask==2.0.1
+google_api_python_client==2.91.0
+protobuf==4.23.3
+gunicorn

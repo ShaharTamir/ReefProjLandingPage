@@ -175,6 +175,7 @@
     bottom: 450px;
     left: -25%;
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 
 #turtle {
@@ -258,7 +259,7 @@
 
 strong {
     font-family: "open-sans";
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .o-strong {
