@@ -173,9 +173,9 @@
 #turtle-container {
     position: relative;
     bottom: 450px;
-    left: -25%;
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
+    right: -25%;
+    /*transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);*/
 }
 
 #turtle {
@@ -184,7 +184,7 @@
 
 @media only screen and (min-width: 1000px) {
     #turtle-container {
-        left: -20%;
+        right: -20%;
     }
 }
 
@@ -196,13 +196,14 @@
 
 @media only screen and (min-width: 1900px) {
     #turtle-container {
-        left: -15%;
+        right: -15%;
     }
 }
 
 /********** jellyfish ************/
 #jellyfish-container {
-    right: -3%;
+    text-align: left;
+    left: -1%;
 }
 
 #jellyfish {

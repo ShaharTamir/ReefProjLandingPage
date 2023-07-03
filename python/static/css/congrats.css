@@ -8,7 +8,7 @@ html, body {
 }
 
 body {
-    background: #141421;
+    background: #151521;
     font-size: 40px;
     margin: 0;
     overflow-x: hidden;
@@ -100,10 +100,11 @@ button {
 }
 
 #corals-container {
-    margin-block-start: 250px;
+    margin-block-start: -400px;
     min-height: 500px;
     display: flex;
     align-items: flex-end;
+    overflow-y: hidden;
 }
 
 .corals {
@@ -113,6 +114,7 @@ button {
 
 #left-coral {
     left: 0;
+    top: 0;
     height: 350px;
 }
 
@@ -122,40 +124,30 @@ button {
 }
 
 .blur-light{
-    content: "";
+    /*content: "";*/
     position: absolute;
-    border-radius: 100%;
+    /*border-radius: 100%;*/
     z-index: 0;
 }
 
 #blur-top {
-    height: 300px;
-    width: 300px;
-    -webkit-filter: blur(200px);
-    filter: blur(200px);
+    width: 500px;
     top: 0;
-    left: -10%;
-    background: #01E0A5;
+    left: -0%;
 }
 
 #blur-mid {
-    height: 325px;
-    width: 325px;
-    -webkit-filter: blur(200px);
-    filter: blur(200px);
+    width: 520px;
     top: 400px;
-    right: -10%;
-    background: #8ED0D3;
+    right: -0%;
 }
 
 #blur-bottom {
-    height: 500px;
-    width: 500px;
-    -webkit-filter: blur(400px);
-    filter: blur(400px);
-    left: 30%;
-    top: 1200px;
-    background: #2FF7E1;
+    position: relative;
+    width: 80%;
+    top: 250px;
+    right: 10%;
+    bottom:
 }
 
 @media only screen and (min-width: 1000px) {
