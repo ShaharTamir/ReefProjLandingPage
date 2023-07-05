@@ -34,10 +34,6 @@ function enable_send() {
         checkbox_bg.style.borderColor = "#FE9400";
         checkbox_bg.style.backgroundColor = "#FE9400";
     } else {
-        button.style.borderColor = "transparent";
-        button.style.background = "rgba(255, 255, 255, 0.15)";
-        button.disabled = true;
-
         checkbox_bg.style.borderColor = "white";
         checkbox_bg.style.backgroundColor = "transparent";
     }

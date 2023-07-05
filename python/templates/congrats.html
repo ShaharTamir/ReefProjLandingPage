@@ -8,19 +8,23 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/congrats.css') }}">
 </head>
 <body>
+    <img id="left-coral" class="corals" src="{{ url_for('static', filename='imgs/left-coral.svg') }}">
+    <img id="blur-top" class="blur-light" src="{{ url_for('static', filename='imgs/top-left-light.png') }}">
+    <img id="blur-mid" class="blur-light" src="{{ url_for('static', filename='imgs/mid-right-light.png') }}">
     <div id="main-title-container">
         <h1 id="main-title">יא נשמה של ברבור!</h1>
     </div>
     <div id="msg">
         <p>תודה שבחרת לתמוך בפרוייקט!<br> <strong>איזה כייף לעשות טוב לעולם, הא?</strong></p>
         <p>נציג שלנו יחזור אליך במייל בקרוב,<br> ועד אז - אלף תודות</p>
-    </div>
-    <div id="signature">
-        <p>עמותת אדמה וים<br>מאיה שלם</p>
+        <p>
+            <a href="https://www.yamidbar.co.il/">עמותת מדבר וים</a><br>
+            מאיה שלם
+        </p>
     </div>
     <div id="button-container">
         <button>
-            <a href="{{ url_for('main') }}">
+            <a id="return-main" href="{{ url_for('main') }}">
                 <h1 class="button-title">להרשמה נוספת</h1>
                 <img id="arrow" src="{{ url_for('static', filename='imgs/arrow-left.svg') }}">
             </a>
@@ -33,9 +37,5 @@
         <img id="blur-bottom" class="blur-light" src="{{ url_for('static', filename='imgs/bottom-light.png') }}">
         <img id="reef" class="corals" src="{{ url_for('static', filename='imgs/reef.svg') }}">
     </div>
-    <img id="left-coral" class="corals" src="{{ url_for('static', filename='imgs/left-coral.svg') }}">
-    <img id="blur-top" class="blur-light" src="{{ url_for('static', filename='imgs/top-left-light.png') }}">
-    <img id="blur-mid" class="blur-light" src="{{ url_for('static', filename='imgs/mid-right-light.png') }}">
-
 </body>
 </html>

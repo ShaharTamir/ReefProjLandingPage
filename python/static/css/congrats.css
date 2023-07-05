@@ -19,7 +19,7 @@ strong {
     font-weight: 500;
 }
 
-a {
+#return-main {
     display: flex;
     justify-content: center;
     text-decoration: none;
@@ -33,18 +33,21 @@ a {
 }
 
 #main-title {
-    font-size: 400%;
+    font-size: 500%;
     color: #2FF7E1;
-    inline-size: 72%;
+    inline-size: 75%;
     word-wrap: break-word;
+    margin-block-end: 30px;
 }
 
 #msg {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-right: 10%;
     margin-left: 10%;
+    z-index:10;
 }
 
 #signature {
@@ -62,7 +65,7 @@ a {
 }
 
 button {
-    margin-block-start: 3.5em;
+    margin-block-start: 2em;
     height: 3.3em;
     width: 100%;
     font-size: 100%;
@@ -116,6 +119,7 @@ button {
     left: 0;
     top: 0;
     height: 350px;
+    z-index: 6;
 }
 
 #reef {
@@ -134,6 +138,7 @@ button {
     width: 500px;
     top: 0;
     left: -0%;
+    z-index: 5;
 }
 
 #blur-mid {
@@ -147,7 +152,6 @@ button {
     width: 80%;
     top: 250px;
     right: 10%;
-    bottom:
 }
 
 @media only screen and (min-width: 1000px) {
