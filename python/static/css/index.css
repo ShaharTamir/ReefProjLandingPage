@@ -265,6 +265,11 @@ strong {
     color: #FE9400;
 }
 
+#midbar {
+    font-family: "open-sans";
+    font-weight: 600;
+}
+
 
 @media only screen and (min-width: 1400px) {
     #content {
